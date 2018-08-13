@@ -11,7 +11,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Treetop1500\\EasyadminDragndropSort\\": ""
+      "Treetop1500\\EasyadminDragndropSortBundle\\": ""
     }
   },
   "require": {
