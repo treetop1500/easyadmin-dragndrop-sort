@@ -1,0 +1,27 @@
+{
+  "name": "treetop1500/easyadmin-dragndrop-sort",
+  "license": "MIT",
+  "description": "A Symfony 4 bundle for allowing drag and drop sorting of entities in list views, incorporating the Sortable Doctrine Extension.",
+  "type": "symfony-bundle",
+  "authors": [
+    {
+      "name": "Robert Wade",
+      "email": "rwade@grayloon.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Treetop1500\\EasyadminDragndropSort\\": ""
+    }
+  },
+  "require": {
+    "php": ">=7.2.0",
+    "symfony/framework-bundle": ">=4.0",
+    "easycorp/easyadmin-bundle": ">=1.17",
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
