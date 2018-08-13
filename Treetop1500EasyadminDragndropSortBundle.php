@@ -1,6 +1,6 @@
 <?php
 
-namespace Treetop1500\EasyadminDragndropSort;
+namespace Treetop1500\EasyadminDragndropSortBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
