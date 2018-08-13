@@ -1,0 +1,13 @@
+[draggable] {
+  user-select: none;
+  -webkit-user-drag: element;
+  cursor: move;
+}
+
+body.easyadmin-list-Page section.content table.table {
+    color: #999;
+}
+
+body.easyadmin-list-Page section.content table.table tr.over {
+    border: 1px dashed lightgray;
+}
