@@ -1,6 +1,8 @@
 # Easy Admin Drag 'n Drop Sort
 This bundle aims to add drag 'n drop sorting to Easy Admin list views, utilizing the sortable doctrine extensions.
 
+**PLEASE NOTE** This is still under developement, so use at your own risk.
+
 ## Getting Started
 ### Installation
 Because this bundle is still under development and yet lacks testing, it is not on Packagist at this time, so you'll need to add the repository to your composer.json file:
