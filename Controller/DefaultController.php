@@ -16,7 +16,7 @@ class DefaultController extends Controller
     /**
      * Resorts an item using it's doctrine sortable property
      *
-     * @Route("/manage/sort",
+     * @Route("/manage/sort/{entityClass}/{$id}/{$position}",
      *   name="easyadmin_dragndrop_sort",
      *   requirements={
      *     "entityClass"="^([A-Za-z]+)$",
