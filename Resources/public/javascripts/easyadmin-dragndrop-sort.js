@@ -92,16 +92,12 @@ let easyadminDragndropSort =
                         xhr.onload = function () {
                             if (xhr.status === 200) {
                                 let response = parser.parseFromString(xhr.responseText,"text/html");
-                                console.log(response);
                                 let newBody = response.getElementsByTagName("body")[0];
-
-
-
-                                console.log(newBody);
                                 let newTbody = newBody.getElementsByTagName("tbody")[0];
-                                console.log(newTbody);
                                 tbody.parentNode.replaceChild(newTbody, tbody);
                                 easyadminDragndropSort.initDraggableEntityRows();
+
+                                $('input[data-toggle="toggle"]').bootstrapToggle();
                             }
                             else {
                                 alert("An error occurred while sorting. Please refresh the page and try again.")
