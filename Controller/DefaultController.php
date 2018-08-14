@@ -16,14 +16,14 @@ class DefaultController extends Controller
     /**
      * Resorts an item using it's doctrine sortable property
      *
-     * @Route("/manage/sort/{entityClass}/{$id}/{$position}",
+     * @Route("/manage/sort/{entityClass}/{id}/{position}",
      *   name="easyadmin_dragndrop_sort",
      *   requirements={
      *     "entityClass"="^([A-Za-z]+)$",
      *     "id"="^(\d)$",
      *     "position"="^(\d)$",
      *   })
-     * @param String $entity
+     * @param String $entityClass
      * @param Integer $id
      * @param Integer $position
      * @throws NotFoundHttpException
