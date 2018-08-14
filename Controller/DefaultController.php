@@ -1,6 +1,6 @@
 <?php
 
-namespace Treetop1500\EasyadminDragndropSort\Controller;
+namespace Treetop1500\EasyadminDragndropSortBundle\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 /**
  * Class DefaultController
- * @package Treetop1500\EasyadminDragndropSort\Controller
+ * @package Treetop1500\EasyadminDragndropSortBundle\Controller
  * @author http://github.com/treetop1500
  */
 class DefaultController extends Controller
@@ -19,7 +19,7 @@ class DefaultController extends Controller
      * Resorts an item using it's doctrine sortable property
      *
      * @Route("/manage/sort/{entityClass}/{id}/{position}",
-     *   name="easyadmin_dragndrop_sort",
+     *   name="easyadmin_dragndrop_sort_sort",
      *   requirements={
      *     "entityClass"="^([A-Za-z]+)$",
      *     "id"="^(\d)$",
