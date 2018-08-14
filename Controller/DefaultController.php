@@ -4,7 +4,6 @@ namespace Treetop1500\EasyadminDragndropSort\Controller;
 
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Common\ContentBundle\Entity\ProductCategory;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
@@ -20,41 +19,34 @@ class DefaultController extends Controller
      * @Route("/manage/sort",
      *   name="easyadmin_dragndrop_sort",
      *   requirements={
-     *     "entity"="^([A-Za-z]+)$",
-     *     "action"="list",
-     *     "sortField"="^([A-Za-z]+)$",
-     *     "sortDirection"="^(ASC|DESC)$",
-     *     "page"="^(\d)$",
-     *
+     *     "entityClass"="^([A-Za-z]+)$",
+     *     "id"="^(\d)$",
+     *     "position"="^(\d)$",
      *   })
      * @param String $entity
-     * @param String $action
-     * @param Integer $page
-     * @param String $sortDirection
-     * @param String $sortField
+     * @param Integer $id
+     * @param Integer $position
      * @throws NotFoundHttpException
      * @return Response
      *
      */
-    public function sortAction($id, $position)
+    public function sortAction($entityClass, $id, $position)
     {
         $em = $this->getDoctrine()->getManager();
-        $e = $em->getRepository($entity)->find($id);
+        $e = $em->getRepository($entityClass)->find($id);
         if (is_null($e)) {
             throw new NotFoundHttpException("The entity was not found");
         }
         $e->setPosition($position);
-        $em->persist($productCategory);
+        $em->persist($e);
         $em->flush();
-        $request = new Request();
         return $this->redirectToRoute(
             "easyadmin",
             array(
-                "action" => $action,
-                "entity" => $entity,
-                "sortField" => $sortField,
-                "sortDirection" => $sortDirection,
-                "page" => $page
+                "action" => "list",
+                "entity" => $entityClass,
+                "sortField" => "position",
+                "sortDirection" => "ASC",
             )
         );
     }
