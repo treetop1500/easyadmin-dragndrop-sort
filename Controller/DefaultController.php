@@ -47,7 +47,7 @@ class DefaultController extends Controller
         $e->setPosition($position);
         $em->persist($e);
         $em->flush();
-        return $this->redirectToRoute(
+        return $this->redcomposeirectToRoute(
             "easyadmin",
             array(
                 "action" => "list",
