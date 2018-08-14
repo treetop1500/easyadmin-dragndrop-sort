@@ -3,10 +3,7 @@ let easyadminDragndropSort =
     {
         initDraggableEntityRows: function() {
 
-
-
-            if(document.getElementsByClassName('easyadmin list')) {
-
+            if(document.body.classList.contains('easyadmin') && document.body.classList.contains('list-page')) {
 
                 if (!Array.prototype.last){
                     Array.prototype.last = function(){
