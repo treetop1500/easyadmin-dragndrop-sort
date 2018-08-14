@@ -8,6 +8,12 @@ body.easyadmin-list-Page section.content table.table {
     color: #999;
 }
 
-body.easyadmin-list-Page section.content table.table tr.over {
+tr.over {
     border: 1px dashed lightgray;
+}
+
+body.easyadmin.list th.sorted {
+    background-color: #eee !important;
+    border-color: #CCC !important;
+    border-bottom: none !important;
 }
