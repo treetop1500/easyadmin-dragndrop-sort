@@ -31,9 +31,13 @@ class DefaultController extends Controller
     public function sortAction($entityClass, $id, $position)
     {
 
-        $rc = new ReflectionClass($entityClass);
-        //$rc->getConstant($entityClass);
-
+        $entityClassNameArray = explode("\\", $entityClass);
+        $entityClassName = end($entityClassNameArray);
+        try {
+            $rc = new ReflectionClass($entityClass);
+        } catch (\ReflectionException $error) {
+            throw new \ReflectionException("The class name ". $entityClass ."  cannot be reflected.");
+        }
 
         $em = $this->getDoctrine()->getManager();
         $e = $em->getRepository($rc->getName())->find($id);
@@ -47,7 +51,7 @@ class DefaultController extends Controller
             "easyadmin",
             array(
                 "action" => "list",
-                "entity" => $entityClass,
+                "entity" => $entityClassName,
                 "sortField" => "position",
                 "sortDirection" => "ASC",
             )
