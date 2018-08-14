@@ -32,10 +32,11 @@ class DefaultController extends Controller
     {
 
         $rc = new ReflectionClass($entityClass);
+        //$rc->getConstant($entityClass);
 
 
         $em = $this->getDoctrine()->getManager();
-        $e = $em->getRepository($rc->getConstant($entityClass))->find($id);
+        $e = $em->getRepository($rc->getName())->find($id);
         if (is_null($e)) {
             throw new NotFoundHttpException("The entity was not found");
         }
