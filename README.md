@@ -50,7 +50,7 @@ easy_admin:
       css:
         - '/bundles/treetop1500easyadmindragndropsort/stylesheets/easyadmin-dragndrop-sort.css'
       js:
-        - '/public/bundles/treetop1500easyadmindragndropsort/stylesheets/easyadmin-dragndrop-sort.css'
+        - '/bundles/treetop1500easyadmindragndropsort/javascripts/easyadmin-dragndrop-sort.js'
 ```
 ...or better yet, compile them into your JS and CSS using webpack or another package manager.
 ```
